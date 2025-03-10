@@ -1,4 +1,8 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using EmailConsoleApp.Interfaces;
+using MailKit.Security;
+using MauiEmail.Models;
+using Microsoft.Extensions.Logging;
+using MimeKit;
 
 namespace MauiEmail
 {
@@ -19,7 +23,9 @@ namespace MauiEmail
     		builder.Logging.AddDebug();
 #endif
 
+           
             return builder.Build();
         }
+
     }
 }
